@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #ffffff;
+            padding: 10px 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .search-bar input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-bar button {
+            padding: 8px 15px;
+            background-color: #1f2a44;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px;
+            background-color: #1f2a44;
+            color: white;
+        }
+        .hero h2{
+            text-align: left;
+             margin-top: 0px;
+            color: #C6DEFD;
+            font-size: 100px;
+        }
+        .hero img {
+            width: 300px;
+            margin-bottom: -36px;
+            margin-right: -15px;
+        }
+        .hero button {
+            background-color: #ff7f50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .services {
+            display: flex;
+            justify-content: space-around;
+            padding: 40px;
+            background-color: white;
+        }
+        .service1 {
+            text-align: center;
+            width: 200px;
+            background-color: #A3DAC2;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .service2 {
+            text-align: center;
+            width: 200px;
+            background-color: #F0DA69;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .service3 {
+            text-align: center;
+            width: 200px;
+            background-color: #E7C2D4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .service4 {
+            text-align: center;
+            width: 200px;
+            background-color: #92BDF6;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .service1 img {
+            width: 192px;
+            height: 150px;
+        }
+        .service2 img {
+            width: 192px;
+            height: 150px;
+        }
+        .service3 img {
+            width: 192px;
+            height: 150px;
+        }
+        .service4 img {
+            width: 192px;
+            height: 150px;
+        }
+        .auth, .login
+        {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa;
+        }
+        .container {
+            display: flex;
+            width: 80%;
+            max-width: 1000px;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .image-container {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .image-container img {
+            width: 70%;
+        }
+        .form-container {
+            width: 50%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .checkbox-container input{
+            margin-right: -200px;
+             margin-left: -214px;
+  
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .social-login {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        .social-login button {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .google-btn {
+            background: #db4437;
+            color: white;
+        }
+        .apple-btn {
+            background: #333;
+            color: white;
+        }
+        .signin-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Medcare</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Search healthcare services">
+                <button>Search</button>
+            </div>
+            <ul>
+                <li><a href="#">Healthcare Services</a></li>
+                <li><a href="#">Offers</a></li>
+                <li><a href="#">Cart</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Healthcare</h2>
+            <p>Reduce HbA1c | No More Medications</p>
+            <p>If you are looking for a creative and fast way to join a healthcare team, we have the perfect solution.</p>
+            <button>Book Consultation</button>
+        </div>
+        <img src="Photos/pngwing 1.png" alt="Doctor with stethoscope">
+    </section>
+    
+    <section class="services">
+        <div class="service1">
+            <img src="Photos/Social Media Lots Of Followers Post Engagement (1).png" alt="Video Consultation Icon">
+            <h3>Instant Video Consultation</h3>
+            <p>Connect with a doctor instantly.</p>
+        </div>
+        <div class="service2">
+            <img src="Photos/Empty Inbox 1.png" alt="Find Doctors Icon">
+            <h3>Find The Doctors Near You</h3>
+            <p>Contact experienced doctors nearby.</p>
+        </div>
+        <div class="service3">
+            <img src="Photos/Business Startup Character Black Man.png" alt="Medicine Delivery Icon">
+            <h3>24/7 Medicine</h3>
+            <p>Medicine delivered to your doorstep.</p>
+        </div>
+        <div class="service4">
+            <img src="Photos/Business Business Trip.png" alt="Lab Tests Icon">
+            <h3>Lab Tests</h3>
+            <p>Simple and hassle-free lab tests.</p>
+        </div>
+    </section>
+    
+    <h2>Our Doctors And Clinics Have Earned Over 5,000+ Reviews On Google!</h2>
+    
+    <section class="auth">
+        <div class="container">
+            <div class="form-container">
+                <h2>Get Started Now</h2>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email Address">
+                <input type="password" placeholder="Password">
+                <div class="checkbox-container">
+                    <input type="checkbox" > I agree to the terms & policy</input>
+                </div>
+                <button>Signup</button>
+                <div class="social-login">
+                    <button class="google-btn">Sign up with Google</button>
+                    <button class="apple-btn">Sign up with Apple</button>
+                </div>
+                <p class="signin-link">Have an account? <a href="#">Sign In</a></p>
+            </div>
+            <div class="image-container">
+                <img src="Photos/chris-lee-70l1tDAI6rM-unsplash 1.png" alt="Medical Symbol">
+            </div>
+        </div>
+    </section>
+    
+    <section class="login">
+        <div class="container">
+            <div class="form-container">
+                <h2>Welcome back!</h2>
+                <h4>Enter your Credentials to access your account</h4>
+                <input type="email" placeholder="Email Address">
+                <input type="password" placeholder="Password">
+                <div class="checkbox-container">
+                    <input type="checkbox" > Remember for 30 days</input>
+                </div>
+                <button>Login</button>
+                <div class="social-login">
+                    <button class="google-btn">Login with Google</button>
+                    <button class="apple-btn">Login with Apple</button>
+                </div>
+                <p class="signin-link">Don’t have an account? <a href="#">Sign Up</a></p>
+            </div>
+            <div class="image-container">
+                <img src="Photos/chris-lee-70l1tDAI6rM-unsplash 2.png" alt="Medical Symbol">
+            </div>
+        </div>
+    </section>
+</body>
+</html>
